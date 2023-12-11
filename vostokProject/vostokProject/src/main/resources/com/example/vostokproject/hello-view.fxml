@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #FFFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vostokproject.HelloController">
+    <children>
+        <AnchorPane fx:id="mainForm" layoutX="1.0" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #FFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+            <children>
+                  <Label layoutX="52.0" layoutY="181.0" text="Текущий баланс:" textFill="#d93e3e" underline="true">
+                      <font>
+                          <Font size="18.0" />
+                      </font>
+                  </Label>
+                  <TextField fx:id="balance" disable="true" layoutX="52.0" layoutY="209.0" prefHeight="35.0" prefWidth="191.0" style="-fx-background-color: #f5f5f5; -fx-border-color: #000000;">
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </TextField>
+                  <Button fx:id="motherlode" layoutX="280.0" layoutY="209.0" mnemonicParsing="false" onMouseClicked="#motherlode_Click" onMouseEntered="#motherlode" onMouseExited="#BBmotherlode" prefHeight="34.0" prefWidth="145.0" style="-fx-background-color: #d93e3e;" text="Пополнить" textFill="WHITE" AnchorPane.leftAnchor="280.0">
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </Button>
+            <Label layoutX="559.0" layoutY="45.0" prefHeight="70.0" prefWidth="450.0" text="ВВ: ВКУС ВОСТОКА" textFill="#d93e3e" AnchorPane.leftAnchor="559.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="45.0">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="521.0" layoutY="115.0" text="Вдохните восточную атмосферу в ресторане &quot;Вкус Востока&quot;" AnchorPane.leftAnchor="521.0" AnchorPane.rightAnchor="-17.799999999999955" AnchorPane.topAnchor="115.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutY="274.0" prefHeight="526.0" prefWidth="1000.0" style="-fx-background-color: #d93e3e;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                        <Button fx:id="report" layoutX="33.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#report_Click" onMouseEntered="#setc2" onMouseExited="#ourc2" prefHeight="99.0" prefWidth="593.0" style="-fx-background-color: #f5f5f5;" text="СФОРМИРОВАТЬ ОТЧЕТ">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="order" layoutX="33.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#order_Click" onMouseEntered="#setc1" onMouseExited="#ourc1" prefHeight="99.0" prefWidth="593.0" style="-fx-background-color: #f5f5f5;" text="ЗАКАЗАТЬ">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="exit" layoutX="33.0" layoutY="444.0" mnemonicParsing="false" onMouseClicked="#exit_Click" onMouseEntered="#setc3" onMouseExited="#ourc3" prefHeight="51.0" prefWidth="222.0" style="-fx-background-color: #f5f5f5;" text="ВЫХОД">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="warehouse" layoutX="33.0" layoutY="301.0" mnemonicParsing="false" onMouseClicked="#warehouse_Click" onMouseEntered="#setc" onMouseExited="#ourc" prefHeight="99.0" prefWidth="593.0" style="-fx-background-color: #f5f5f5;" text="СКЛАД">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Button>
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="searchForm" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #ffff;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="bup2" layoutX="696.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#bup2_Click" onMouseEntered="#bup2" onMouseExited="#BBbup2" prefHeight="51.0" prefWidth="274.0" style="-fx-background-color: #d93e3e;" text="Продукты в наличии" textFill="WHITE" AnchorPane.rightAnchor="29.600000000000023">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="bup1" layoutX="44.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#bup1_Click" onMouseEntered="#bup1" onMouseExited="#BBbup1" prefHeight="51.0" prefWidth="262.0" style="-fx-background-color: #d93e3e;" text="Хоз. часть в наличии" textFill="WHITE" AnchorPane.leftAnchor="44.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <TextArea fx:id="swarchBup" layoutX="44.0" layoutY="107.0" prefHeight="596.0" prefWidth="927.0" style="-fx-background-color: #FFFF; -fx-border-color: #d93e3e; -fx-border-width: 10;" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="29.0">
+                    <font>
+                        <Font size="29.0" />
+                    </font>
+                </TextArea>
+                <Button fx:id="exit2" layoutX="44.0" layoutY="726.0" mnemonicParsing="false" onMouseClicked="#exit1_Click" onMouseEntered="#exit2" onMouseExited="#BBexit2" prefHeight="46.0" prefWidth="167.0" style="-fx-background-color: #d93e3e;" text="Назад" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="orderForm" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #FFFF;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="yesBuy" disable="true" layoutX="843.0" layoutY="705.0" mnemonicParsing="false" onMouseClicked="#yesBuy_Click" onMouseEntered="#yesb" onMouseExited="#bbyesb" prefHeight="56.0" prefWidth="167.0" style="-fx-background-color: #d93e3e;" text="Заказать" textFill="WHITE" AnchorPane.rightAnchor="19.0">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+                <Label layoutX="818.0" layoutY="180.0" prefHeight="105.0" prefWidth="158.0" text="Заказ доступен только от &#10;суммы 13000 рублей" textAlignment="RIGHT" AnchorPane.rightAnchor="23.600000000000023">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font></Label>
+                <Button fx:id="exit1" layoutX="43.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#exit1_Click" onMouseEntered="#exit1" onMouseExited="#BBexit1" prefHeight="54.0" prefWidth="127.0" style="-fx-background-color: #d93e3e;" text="Назад" textFill="WHITE" AnchorPane.leftAnchor="43.0">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+                  <ListView fx:id="listV" layoutX="37.0" layoutY="255.0" prefHeight="422.0" prefWidth="387.0" style="-fx-background-color: #FFFF; -fx-border-color: #d93e3e; -fx-border-width: 5;" AnchorPane.leftAnchor="37.0" />
+                  <ListView fx:id="listV1" layoutX="585.0" layoutY="255.0" prefHeight="422.0" prefWidth="387.0" style="-fx-background-color: #FFFF; -fx-border-color: #d93e3e; -fx-border-width: 5;" AnchorPane.rightAnchor="27.799999999999955" />
+                  <ComboBox fx:id="post" layoutX="43.0" layoutY="199.0" onMouseClicked="#fullComboBox" prefHeight="35.0" prefWidth="326.0" style="-fx-background-color: #FFFF; -fx-border-color: #d93e3e; -fx-border-width: 5;" AnchorPane.leftAnchor="43.0" />
+                  <Button fx:id="output" layoutX="393.0" layoutY="199.0" mnemonicParsing="false" onMouseClicked="#output" prefHeight="34.0" prefWidth="40.0" style="-fx-background-color: #d93e3e;" text="🔎" AnchorPane.leftAnchor="393.0">
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </Button>
+                  <Label layoutX="43.0" layoutY="176.0" text="Выберите поставщика:" AnchorPane.leftAnchor="43.0">
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </Label>
+                  <Button fx:id="sydaButton" layoutX="451.0" layoutY="498.0" mnemonicParsing="false" onMouseClicked="#sudaButton_Click" prefHeight="52.0" prefWidth="106.0" style="-fx-background-color: #FFFF; -fx-border-color: #d93e3e; -fx-border-radius: 5;" text="🠔" AnchorPane.leftAnchor="451.0" AnchorPane.rightAnchor="442.6">
+                      <font>
+                          <Font name="System Bold" size="23.0" />
+                      </font>
+                  </Button>
+                  <Button fx:id="tydaButton" layoutX="451.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#tydaButton_Click" onMouseEntered="#tyda" onMouseExited="#bbtyda" prefHeight="50.0" prefWidth="106.0" style="-fx-background-color: #d93e3e;" text="🠖" AnchorPane.leftAnchor="451.0" AnchorPane.rightAnchor="442.6">
+                      <font>
+                          <Font size="23.0" />
+                      </font>
+                  </Button>
+                  <TextField fx:id="skF" layoutX="451.0" layoutY="432.0" onMouseClicked="#sumClean" prefHeight="34.0" prefWidth="106.0" style="-fx-background-color: #FFFF; -fx-border-color: #d93e3e;" text="1" AnchorPane.leftAnchor="451.0" AnchorPane.rightAnchor="442.6" />
+                  <Label fx:id="opasnaaa" layoutX="448.0" layoutY="412.0" text="Укажите количество" />
+                  <Label fx:id="sumYes" layoutX="131.0" layoutY="694.0" prefHeight="35.0" prefWidth="151.0" text="0" AnchorPane.leftAnchor="131.0">
+                      <font>
+                          <Font size="24.0" />
+                      </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="693.0" text="Итого:" textFill="#d93e3e" underline="true" AnchorPane.leftAnchor="46.0">
+                      <font>
+                          <Font size="24.0" />
+                      </font>
+                  </Label>
+                  <Label fx:id="goodShop" layoutX="474.0" layoutY="715.0" prefHeight="35.0" prefWidth="338.0" text="Покупка успешно совершена!" textFill="#73b96c" visible="false" AnchorPane.rightAnchor="188.0">
+                      <font>
+                          <Font size="24.0" />
+                      </font>
+                  </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="reportForm" layoutX="419.0" layoutY="161.0" prefHeight="354.0" prefWidth="555.0" style="-fx-background-color: #FFFF; -fx-border-color: #d93e3e; -fx-border-width: 5;" visible="false" AnchorPane.leftAnchor="419.0">
+            <children>
+                <ComboBox fx:id="dataO" layoutX="50.0" layoutY="99.0" onMouseClicked="#ordClick" prefHeight="35.0" prefWidth="298.0" style="-fx-background-color: #FFFF; -fx-border-color: #d93e3e; -fx-border-width: 3;" AnchorPane.leftAnchor="50.0" />
+                <Button fx:id="letsgo" layoutX="356.0" layoutY="273.0" mnemonicParsing="false" onMouseClicked="#Okay" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: #FFFF; -fx-border-color: #d93e3e; -fx-border-width: 3; -fx-border-radius: 3;" text="Сформировать" AnchorPane.bottomAnchor="36.2" AnchorPane.rightAnchor="24.599999999999994">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Label layoutX="45.0" layoutY="56.0" text="Выберите период:" AnchorPane.leftAnchor="45.0">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="goodJob" layoutX="194.0" layoutY="20.0" text="Отчет успешно сформирован!" textFill="#30d95b" visible="false" AnchorPane.topAnchor="20.0" />
+                <Button fx:id="letsgo1" layoutX="29.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#exit1_Click" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: #FFFF; -fx-border-color: #d93e3e; -fx-border-width: 3; -fx-border-radius: 3;" text="Выход" AnchorPane.leftAnchor="29.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="warningForm" layoutX="472.0" layoutY="209.0" prefHeight="237.0" prefWidth="503.0" style="-fx-background-color: #FFFF; -fx-border-color: #d93e3e; -fx-border-width: 3;" visible="false" AnchorPane.leftAnchor="472.0">
+            <children>
+                <Label layoutX="65.0" layoutY="67.0" prefHeight="76.0" prefWidth="387.0" text="Вы уверены, что хотите покинуть страницу?&#10;Все введенные данные будут утеряны." textAlignment="CENTER" underline="true" AnchorPane.topAnchor="67.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+                </Label>
+                <Label layoutX="146.0" layoutY="14.0" text="ВНИМАНИЕ!" textFill="#d93e3e" AnchorPane.topAnchor="14.0">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Button fx:id="nono" layoutX="48.0" layoutY="165.0" mnemonicParsing="false" onMouseClicked="#nono" prefHeight="35.0" prefWidth="114.0" style="-fx-background-color: #ffa799;" text="Отмена" AnchorPane.leftAnchor="48.0" />
+                <Button fx:id="yesyes" layoutX="356.0" layoutY="165.0" mnemonicParsing="false" onMouseClicked="#yesyes" prefHeight="35.0" prefWidth="114.0" style="-fx-background-color: #6bdb6b;" text="Да" AnchorPane.rightAnchor="32.60000000000002">
+                    <font>
+                        <Font name="Gigi" size="12.0" />
+                    </font></Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
